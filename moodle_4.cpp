@@ -22,14 +22,9 @@ public:
     void print();//输出结果
 };
 ExcAB::ExcAB(){
-    ifstream in("/home/yuhd/Desktop/code/algorithm/data.txt");
-    if(!in){
-        cout<<"can't open file"<<endl;
-        return;
-    }
     for(int i=0;i<1000;i++){
         for(int j=0;j<20;j++){
-            in>>matrix[i][j];
+            cin>>matrix[i][j];
         }
     }
     for(int i=0;i<20;i++){//初始化互斥表
@@ -38,7 +33,6 @@ ExcAB::ExcAB(){
             exclusion[j][i]=exclusion[i][j];//对称，只计算一半
         }
     }
-    in.close();
     for(int i=0;i<20;i++){//初始化结果
         result[i]=0;
         bestResult[i]=0;

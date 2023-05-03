@@ -81,6 +81,5 @@ int main() {
     cin >> n >> d;
     dTree dt(n, d);    //构建与初始化树
     dt.solution();      //通过solution函数输出结果
-    system("pause");
     return 0;
 }
